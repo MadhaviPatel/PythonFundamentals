@@ -5,23 +5,24 @@ ch = int(input("\n\n1.Home \n2.Industry \n3.Commercial \n\nEnter choice:"))
 fixed_charge = 50
 
 if ch == 1:
+    home_count1 = 0
+    home_count2 = 0
+    home_count3 = 0
     fixed_charge = 50
     fuel_charge = unit * 1.98
     if unit >= 50:
         unit = unit - 50
         home_count1 = 50 * 3.2
-       if unit >= 150:
-        unit = unit - 150;
-        home_count2 = 150 * 3.9
-          if unit >= 0:
-          home_count3 = 150 * 4.5
-        else :
-            home_count2 = 150*3.9
+        if unit >= 150:
+            unit = unit - 150
+            home_count2 = 150 * 3.9
+            if unit >= 0:
+                home_count3 = 150 * 4.5
+        else:
+            home_count2 = 150 * 3.9
     else:
-         home_count1 = unit *3.2
-
-
-    charge = home_count3 + home_count2 + home_count1
+        home_count1 = unit * 3.2
+    charge = home_count1 + home_count2
     home = charge + fuel_charge + fixed_charge
     tax = home * 0.15
     bill = home + tax
